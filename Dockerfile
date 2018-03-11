@@ -12,7 +12,7 @@ FROM ruby:alpine@sha256:1d35d83403ab30d3f6d93df194fd830286e0f26d8d26e2748d46f630
 RUN set -xe \
   && apk add --no-cache --virtual .build-deps \
     build-base \
-    git \
+  && apk add --no-cache git \
   && gem install travis --no-rdoc --no-ri \
   && apk del .build-deps \
   # unset SUID on all files
