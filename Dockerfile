@@ -15,11 +15,8 @@ RUN set -xe \
     git \
   && gem install travis --no-rdoc --no-ri \
   && apk del .build-deps \
-  # && mkdir project \
   # unset SUID on all files
   && for i in $(find / -perm /6000 -type f); do chmod a-s $i; done
-
-# VOLUME ["/project"]
 
 WORKDIR project
 
