@@ -13,8 +13,7 @@ RUN set -xe \
   && apk add --no-cache --virtual .build-deps \
     build-base \
     git \
-  && gem install travis \
-  && gem install travis-lint \
+  && gem install travis --no-rdoc --no-ri \
   && apk del .build-deps \
   # && mkdir project \
   # unset SUID on all files
