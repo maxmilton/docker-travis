@@ -1,6 +1,8 @@
 <!-- markdownlint-disable first-line-h1 -->
 
 [![Build Status](https://travis-ci.org/MaxMilton/docker-travis.svg?branch=master)](https://travis-ci.org/MaxMilton/docker-travis)
+[![Image layers](https://images.microbadger.com/badges/image/maxmilton/travis.svg)](https://microbadger.com/images/maxmilton/travis)
+[![Image version](https://images.microbadger.com/badges/version/maxmilton/travis.svg)](https://microbadger.com/images/maxmilton/travis)
 
 # Travis CLI via Docker
 
