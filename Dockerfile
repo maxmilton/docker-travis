@@ -12,14 +12,11 @@ FROM ruby:alpine@sha256:1d35d83403ab30d3f6d93df194fd830286e0f26d8d26e2748d46f630
 RUN set -xe \
   && apk add --no-cache --virtual .build-deps \
     build-base \
-    git \
+  && apk add --no-cache git \
   && gem install travis --no-rdoc --no-ri \
   && apk del .build-deps \
-  # && mkdir project \
   # unset SUID on all files
   && for i in $(find / -perm /6000 -type f); do chmod a-s $i; done
-
-# VOLUME ["/project"]
 
 WORKDIR project
 
